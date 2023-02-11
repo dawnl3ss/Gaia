@@ -25,7 +25,16 @@ main(){
     echo -e "$White─────────⮞ Checking for Repositories ⮜─────────"
     echo -e "$BBlue[>] Checking for OSINT repositories..."
     for repo in ${!osintGithubTools[@]}; do
-        git clone ${osintGithubTools[$repo]} tools/OSINT/$repo
+        echo -e "$Cyan[+] Installing repository $repo...$BCyan"
+        git clone ${osintGithubTools[$repo]} tools/osint/$repo
+        echo -e " "
+    done
+
+    echo -e "$BBlue[>] Checking for Enum repositories..."
+    for repo in ${!enumGithubTools[@]}; do
+        echo -e "$Cyan[+] Installing repository $repo...$BCyan"
+        git clone ${enumGithubTools[$repo]} tools/enum/$repo
+        echo -e " "
     done
 }
 main
