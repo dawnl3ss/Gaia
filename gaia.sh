@@ -21,19 +21,26 @@ main(){
             sudo apt install $pkg
         fi
     done
-#${githubTools[$repo]}
+
     echo -e "$White─────────⮞ Checking for Repositories ⮜─────────"
     echo -e "$BBlue[>] Checking for OSINT repositories..."
-    for repo in ${!osintGithubTools[@]}; do
+    for repo in ${!osintGitTools[@]}; do
         echo -e "$Cyan[+] Installing repository $repo...$BCyan"
-        git clone ${osintGithubTools[$repo]} tools/osint/$repo
+        git clone ${osintGitTools[$repo]} tools/osint/$repo
         echo -e " "
     done
 
     echo -e "$BBlue[>] Checking for Enum repositories..."
-    for repo in ${!enumGithubTools[@]}; do
+    for repo in ${!enumGitTools[@]}; do
         echo -e "$Cyan[+] Installing repository $repo...$BCyan"
-        git clone ${enumGithubTools[$repo]} tools/enum/$repo
+        git clone ${enumGitTools[$repo]} tools/enum/$repo
+        echo -e " "
+    done
+
+    echo -e "$BBlue[>] Checking for GainAccess repositories..."
+    for repo in ${!accesGitTools[@]}; do
+        echo -e "$Cyan[+] Installing repository $repo...$BCyan"
+        git clone ${accesGitTools[$repo]} tools/access/$repo
         echo -e " "
     done
 }
