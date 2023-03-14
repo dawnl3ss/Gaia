@@ -43,5 +43,9 @@ main(){
         git clone ${accesGitTools[$repo]} tools/access/$repo
         echo -e " "
     done
+
+    echo -e "$Cyan[+] Installing repository SecLists...$BCyan"
+    git clone https://github.com/4m4Sec/SecLists wordlists/
+    echo -e " "
 }
 main
