@@ -47,5 +47,11 @@ main(){
     echo -e "$Cyan[+] Installing repository SecLists...$BCyan"
     git clone https://github.com/4m4Sec/SecLists wordlists/
     echo -e " "
+
+    echo -e "$White─────────⮞ Checking for implementations ⮜─────────"
+    echo -e "$BBlue[>] MD5-2-John implement detected..."
+    echo -e "$Cyan[+] moving file in /usr/share/john/md5-2-john.py..."
+    sudo mv src/john/md5-2-john.py /usr/share/john/md5-2-john.py
+    echo -e " "
 }
 main
