@@ -8,6 +8,7 @@ declare -A osintGitTools=(
     [DaProfiler]="https://github.com/daprofiler/DaProfiler"
     [PhoneinfoGA]="https://github.com/sundowndev/phoneinfoga"
     [WhatsMyName]="https://github.com/WebBreacher/WhatsMyName"
+    [Maigret]="https://github.com/soxoj/maigret"
 )
 
 declare -A enumGitTools=(
@@ -17,4 +18,5 @@ declare -A enumGitTools=(
 declare -A accesGitTools=(
     [py-rev-shell]="https://github.com/4m4Sec/py-reverse-shell"
     [php-rev-shell]="https://github.com/4m4Sec/php-reverse-shell"
+    [sh-rev-shell]="https://github.com/4m4Sec/sh-reverse-shell"
 )
