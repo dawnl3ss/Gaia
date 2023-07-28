@@ -2,6 +2,7 @@ linuxPkg=(
     ffuf nmap sqlmap
     nikto hash-identifier
     hydra binwalk stegseek
+    wpscan python python3
 )
 
 declare -A osintGitTools=(
