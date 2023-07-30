@@ -1,7 +1,7 @@
 linuxPkg=(
     ffuf nmap sqlmap
     nikto hash-identifier
-    hydra binwalk stegseek
+    hydra binwalk ./package/stegseek
     wpscan python python3
 )
 
