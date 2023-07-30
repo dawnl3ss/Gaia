@@ -26,26 +26,26 @@ main(){
     echo -e "$BBlue[>] Checking for OSINT repositories..."
     for repo in ${!osintGitTools[@]}; do
         echo -e "$Cyan[+] Installing repository $repo...$BCyan"
-        git clone ${osintGitTools[$repo]} tools/osint/$repo
+        git clone ${osintGitTools[$repo]} /security/osint/$repo
         echo -e " "
     done
 
     echo -e "$BBlue[>] Checking for Enum repositories..."
     for repo in ${!enumGitTools[@]}; do
         echo -e "$Cyan[+] Installing repository $repo...$BCyan"
-        git clone ${enumGitTools[$repo]} tools/enum/$repo
+        git clone ${enumGitTools[$repo]} /security/tools/$repo
         echo -e " "
     done
 
     echo -e "$BBlue[>] Checking for GainAccess repositories..."
     for repo in ${!accesGitTools[@]}; do
         echo -e "$Cyan[+] Installing repository $repo...$BCyan"
-        git clone ${accesGitTools[$repo]} tools/access/$repo
+        git clone ${accesGitTools[$repo]} /security/rev-shells/$repo
         echo -e " "
     done
 
     echo -e "$Cyan[+] Installing repository SecLists...$BCyan"
-    git clone https://github.com/4m4Sec/SecLists wordlists/
+    git clone https://github.com/4m4Sec/SecLists /security/wordlists/
     echo -e " "
 
     echo -e "$White─────────⮞ Checking for implementations ⮜─────────"
