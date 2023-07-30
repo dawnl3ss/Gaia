@@ -46,9 +46,14 @@ main(){
 
     echo -e "$BBlue[>] Checking for GainAccess repositories..."
     for repo in ${!accesGitTools[@]}; do
-        echo -e "$Cyan[+] Installing repository $repo...$BCyan"
-        git clone ${accesGitTools[$repo]} /security/rev-shells/$repo
-        echo -e " "
+        gitrep =`git clone ${accesGitTools[$repo]} /security/rev-shells/$repo`
+
+        if [[ "$gitrep" == *"already exists and is not an empty directory"* ]]; then
+            echo -e "$Cyan[!] Repository $repo is already installed !"
+            echo -e " "
+        else
+            echo -e "$Cyan[+] Installing repository $repo...$BCyan"
+        fi
     done
 
     echo -e "$Cyan[+] Installing repository SecLists...$BCyan"
@@ -61,4 +66,5 @@ main(){
     sudo mv src/john/md5-2-john.py /usr/share/john/md5-2-john.py
     echo -e " "
 }
+#already exists and is not an empty directory
 main
