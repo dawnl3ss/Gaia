@@ -48,7 +48,7 @@ main(){
     for repo in ${!accesGitTools[@]}; do
         gitrep=`git clone ${accesGitTools[$repo]} /security/rev-shells/$repo`
 
-        echo $gitrep
+        echo "gitrep : $gitrep"
         if [[ "$gitrep" == *"already exists and is not an empty directory"* ]]; then
             echo -e "$Cyan[!] Repository $repo is already installed !"
         else
