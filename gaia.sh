@@ -13,6 +13,7 @@ main(){
     git clone https://github.com/4m4Sec/dotfiles dotfiles/
     echo -e "$Cyan[+] moving files in the /home/ folder..."
     mv dotfiles/bashrc /home/amanara/.bashrc
+    rm -rf dotfiles/
 
     echo -e "$White──────────⮞ Checking for Packages ⮜──────────"
     for pkg in ${linuxPkg[@]}; do
