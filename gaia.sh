@@ -8,6 +8,12 @@ main(){
     echo -e "$Blue 🎩 $White Starting Gaia... $Blue"
     display_ascii
 
+    echo -e "$White──────────⮞ Checking for your dotfiles ⮜──────────"
+    echo -e "$BBlue[>] Github dotfiles found..."
+    git clone https://github.com/4m4Sec/dotfiles dotfiles/
+    echo -e "$Cyan[+] moving files in the /home/ folder..."
+    mv dotfiles/bashrc /home/amanara/.bashrc
+
     echo -e "$White──────────⮞ Checking for Packages ⮜──────────"
     for pkg in ${linuxPkg[@]}; do
         isInstalled=`dpkg -s $pkg`
