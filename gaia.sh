@@ -46,7 +46,7 @@ main(){
 
     echo -e "$BBlue[>] Checking for GainAccess repositories..."
     for repo in ${!accesGitTools[@]}; do
-        gitrep =`git clone ${accesGitTools[$repo]} /security/rev-shells/$repo`
+        gitrep=`git clone ${accesGitTools[$repo]} /security/rev-shells/$repo`
 
         if [[ "$gitrep" == *"already exists and is not an empty directory"* ]]; then
             echo -e "$Cyan[!] Repository $repo is already installed !"
