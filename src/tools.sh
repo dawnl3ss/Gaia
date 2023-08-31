@@ -3,7 +3,7 @@ linuxPkg=(
     nikto hash-identifier
     hydra binwalk ./package/stegseek.deb
     wpscan python python3
-    exploitdb
+    exploitdb amass
 )
 
 declare -A osintGitTools=(
