@@ -12,7 +12,7 @@ main(){
     echo -e "$BBlue[>] Github dotfiles found..."
     git clone https://github.com/dawnl3ss/dotfiles dotfiles/
     echo -e "$Cyan[+] moving files in the /home/ folder..."
-    mv dotfiles/bashrc /home/amanara/.bashrc
+    mv dotfiles/bashrc /home/dawnl3ss/.bashrc
     rm -rf dotfiles/
 
     echo -e "$White──────────⮞ Checking for Packages ⮜──────────"
@@ -52,7 +52,7 @@ main(){
     done
 
     echo -e "$Cyan[+] Installing repository SecLists...$BCyan"
-    git clone https://github.com/4m4Sec/SecLists /security/wordlists/
+    git clone https://github.com/dawnl3ss/SecLists /security/wordlists/
     echo -e " "
 
     echo -e "$White─────────⮞ Checking for implementations ⮜─────────"
