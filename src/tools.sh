@@ -3,7 +3,7 @@ linuxPkg=(
     nikto hash-identifier
     hydra binwalk ./package/stegseek.deb
     wpscan python python3
-    exploitdb amass
+    exploitdb amass ghidra
 )
 
 declare -A osintGitTools=(
@@ -11,6 +11,8 @@ declare -A osintGitTools=(
     [PhoneinfoGA]="https://github.com/sundowndev/phoneinfoga"
     [WhatsMyName]="https://github.com/WebBreacher/WhatsMyName"
     [Maigret]="https://github.com/soxoj/maigret"
+    [Theia]="https://github.com/dawnl3ss/Theia"
+    [Holehe]="https://github.com/megadose/holehe"
 )
 
 declare -A enumGitTools=(
