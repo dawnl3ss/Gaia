@@ -10,7 +10,7 @@ main(){
 
     echo -e "$White──────────⮞ Checking for your dotfiles ⮜──────────"
     echo -e "$BBlue[>] Github dotfiles found..."
-    git clone https://github.com/4m4Sec/dotfiles dotfiles/
+    git clone https://github.com/dawnl3ss/dotfiles dotfiles/
     echo -e "$Cyan[+] moving files in the /home/ folder..."
     mv dotfiles/bashrc /home/amanara/.bashrc
     rm -rf dotfiles/
