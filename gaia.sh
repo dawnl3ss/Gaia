@@ -4,15 +4,16 @@ source src/display/ascii.sh
 source src/display/colors.sh
 
 main(){
+    username="dawnl3ss"
     clear
     echo -e "$Blue 🎩 $White Starting Gaia... $Blue"
     display_ascii
 
     echo -e "$White──────────⮞ Checking for your dotfiles ⮜──────────"
     echo -e "$BBlue[>] Github dotfiles found..."
-    git clone https://github.com/dawnl3ss/dotfiles dotfiles/
+    git clone https://github.com/$username/dotfiles dotfiles/
     echo -e "$Cyan[+] moving files in the /home/ folder..."
-    mv dotfiles/bashrc /home/dawnl3ss/.bashrc
+    mv dotfiles/bashrc /home/$username/.bashrc
     rm -rf dotfiles/
 
     echo -e "$White──────────⮞ Checking for Packages ⮜──────────"
@@ -52,7 +53,7 @@ main(){
     done
 
     echo -e "$Cyan[+] Installing repository SecLists...$BCyan"
-    git clone https://github.com/dawnl3ss/SecLists /security/wordlists/
+    git clone https://github.com/$username/SecLists /security/wordlists/
     echo -e " "
 
     echo -e "$White─────────⮞ Checking for implementations ⮜─────────"
@@ -60,6 +61,10 @@ main(){
     echo -e "$Cyan[+] moving file in /usr/share/john/md5-2-john.py..."
     sudo mv src/john/md5-2-john.py /usr/share/john/md5-2-john.py
     echo -e " "
+
+    echo -e "$White──────────⮞ Creating Symlink to Desktop ⮜──────────"
+    echo -e "$Cyan[+] Creating symlink of /security to /home/$username/Desktop"
+    ln -s /security /home/$username/Desktop/Security
+
 }
-#already exists and is not an empty directory
 main
